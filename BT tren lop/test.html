@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding 0;
+        margin 0;
+        box-sizing: border-box;
+    }
+    .nav{
+        display:flex;
+        margin-bottom:20px;
+    }
+    
+    div{
+        width:400px;
+        height:30px;
+        margin-top:20px;
+        margin-bottom: 20px;
+        }
+    button{
+        width:100px;
+        height:30px;
+        margin-left:30px;
+    }
+</style>
+<body>
+
+    <div class="nav">
+        <div><p>n=</p></div>
+        <input type="text" id="input" value="">
+    </div>
+    <div class="nav">
+        <button type="button" onclick="chan()">Chan</button>
+        <button type="button" onclick="le()">Le</button>
+        <button type="button" onclick="tatca()">Tu 1 -> n</button>
+    </div>
+    <div id="chan">Day chan: </div>
+    <div id="le">Day le: </div>
+    <div id="tatca">Day tu 1 -> n: </div>
+    <script>
+        a=document.getElementById("input").value;
+        
+        function chan(){
+            a=document.getElementById("input").value;
+            document.getElementById("chan").innerHTML="Day chan: ";
+            for(i=1;i<=a;i++){
+                if(i%2==0)
+                    document.getElementById("chan").innerHTML+= i + " ";
+            }
+        }
+        function le(){
+            a=document.getElementById("input").value;
+            document.getElementById("le").innerHTML="Day le: ";
+            for(i=1;i<=a;i++){
+                if(i%2!=0)
+                    document.getElementById("le").innerHTML+= i + " ";
+            }
+        }
+        function tatca(){
+            a=document.getElementById("input").value;
+            document.getElementById("tatca").innerHTML="Day tu 1 -> n: ";
+            for(i=1;i<=a;i++){
+                document.getElementById("tatca").innerHTML+=i + " ";
+            }
+        }
+    </script>
+</body>
+</html>
